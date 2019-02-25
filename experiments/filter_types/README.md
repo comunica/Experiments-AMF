@@ -6,7 +6,7 @@ To run this experiment, Comunica Bencher must be [installed](https://github.com/
 ## Combinations
 
 | | `MATRIX_SERVER_FILTER` | `MATRIX_CLIENT_CONFIG` |
------
+|-|-|-|
 | combination_0 | `BloomFilter` | `client-config-none.json` |
 | combination_1 | `GCSFilter` | `client-config-none.json` |
 | combination_2 | `BloomFilter` | `client-config-triple.json` |
