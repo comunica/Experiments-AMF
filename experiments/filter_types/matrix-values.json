@@ -1,0 +1,12 @@
+{
+    "MATRIX_SERVER_FILTER": [
+        "BloomFilter",
+        "GCSFilter"
+    ],
+    "MATRIX_CLIENT_CONFIG": [
+        "client-config-none.json",
+        "client-config-triple.json",
+        "client-config-bgp.json",
+        "client-config-triplebgp.json"
+    ]
+}
