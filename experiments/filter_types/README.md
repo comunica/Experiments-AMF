@@ -5,6 +5,9 @@ To run this experiment, Comunica Bencher must be [installed](https://github.com/
 
 ## Combinations
 
+This experiment consists of multiple combinations, which,
+after running `comunica-bencher prepare-data`, can be found in the `combination_*` folders.
+
 | | `MATRIX_SERVER_FILTER` | `MATRIX_CLIENT_CONFIG` |
 |-|-|-|
 | combination_0 | `BloomFilter` | `client-config-none.json` |
