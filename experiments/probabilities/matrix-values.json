@@ -1,0 +1,8 @@
+{
+    "MATRIX_SERVER_PROBABILITY": [
+        0.001,
+        0.008,
+        0.015,
+        0.125
+    ]
+}
