@@ -1,0 +1,4 @@
+FROM nginx:stable
+
+ADD ./input/nginx-default-cache-%MATRIX_SERVER_CACHE_NGINX% /etc/nginx/sites-enabled/default
+ADD ./input/nginx.conf /etc/nginx/nginx.conf

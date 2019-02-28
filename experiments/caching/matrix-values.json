@@ -1,0 +1,10 @@
+{
+    "MATRIX_SERVER_CACHE_NGINX": [
+        true,
+        false
+    ],
+    "MATRIX_SERVER_CACHE_AMF": [
+        true,
+        false
+    ]
+}
