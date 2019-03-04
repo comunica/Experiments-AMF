@@ -6,7 +6,8 @@
       "title": "Dataset",
       "type": "HdtDatasource",
       "description": "My Datasource",
-      "settings": { "file": "/data/dataset.hdt" }
+      "settings": { "file": "/data/dataset.hdt" },
+      "amf": true
     }
   },
   
