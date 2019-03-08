@@ -14,6 +14,8 @@ after running `comunica-bencher prepare-data`, can be found in the `combination_
 | combination_1 | `0.008` |
 | combination_2 | `0.015` |
 | combination_3 | `0.125` |
+| combination_4 | `0.25` |
+| combination_5 | `0.5` |
 
 ## Usage
 
