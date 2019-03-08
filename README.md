@@ -14,6 +14,16 @@ More information on each experiments, and how to run it, can be found inside the
 * [In-band vs Out-band](https://github.com/comunica/Experiments-AMF/tree/master/experiments/in_vs_out_band): AMF metadata is exposed either in-band with TPFs, or out-band, which requires an additional HTTP request by the client.
 * [Caching](https://github.com/comunica/Experiments-AMF/tree/master/experiments/caching): The effects of caching TPFs and AMF filters are evaluated.
 
+## Bulk execution
+
+We execute these experiments on a separate dedicated _experiment machine_.
+Afterwards, we analyze the results locallly on an _analysis machine_.
+
+1. Experiment machine: `./run.sh`: Run _all_ experiments.
+1. Experiment machine: `./collect.sh`: Compress all experimental results.
+1. Analysis machine: `./download.sh`: Download the experimental results to the analysis machine.
+1. Analysis machine: `./plot.sh`: Create plots from the results.
+
 ## License
 This code is copyrighted by [Ghent University – imec](http://idlab.ugent.be/)
 and released under the [MIT license](http://opensource.org/licenses/MIT).
