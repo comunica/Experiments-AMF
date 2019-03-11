@@ -49,9 +49,9 @@ server {
 
         expires 7d; 
 
-        proxy_cache fragments-cache; 
-        proxy_cache_key "$request_uri $http_accept"; 
-        proxy_cache_valid 200 302 404 60m; 
-        proxy_cache_bypass $arg_nocache $http_pragma; 
+        #proxy_cache fragments-cache; 
+        #proxy_cache_key "$request_uri $http_accept"; 
+        #proxy_cache_valid 200 302 404 60m; 
+        #proxy_cache_bypass $arg_nocache $http_pragma; 
     } 
 }
