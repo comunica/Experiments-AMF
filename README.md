@@ -14,6 +14,7 @@ More information on each experiments, and how to run it, can be found inside the
 * [In-band vs Out-band](https://github.com/comunica/Experiments-AMF/tree/master/experiments/in_vs_out_band): AMF metadata is exposed either in-band with TPFs, or out-band, which requires an additional HTTP request by the client.
 * [Caching](https://github.com/comunica/Experiments-AMF/tree/master/experiments/caching): The effects of caching TPFs and AMF filters are evaluated.
 * [Delay](https://github.com/comunica/Experiments-AMF/tree/master/experiments/delay): The effects of different network delays are evaluated.
+* [Server metadata enabled](https://github.com/comunica/Experiments-AMF/tree/master/experiments/server_metadata_enabled): AMF metadata dynamically enabled or disabled based on the number of matches.
 
 ## Bulk execution
 
