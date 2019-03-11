@@ -4,5 +4,10 @@
         "512k",
         "2048k",
         "4096k"
+    ],
+    "MATRIX_CLIENT_CONFIG": [
+        "client-config-none.json",
+        "client-config-triple.json",
+        "client-config-bgp.json"
     ]
 }
