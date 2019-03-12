@@ -10,12 +10,14 @@ after running `comunica-bencher prepare-data`, can be found in the `combination_
 
 | | `MATRIX_SERVER_PROBABILITY` |
 |-|-|
-| combination_0 | `0.001` |
-| combination_1 | `0.008` |
-| combination_2 | `0.015` |
-| combination_3 | `0.125` |
-| combination_4 | `0.25` |
-| combination_5 | `0.5` |
+| combination_0 | `0.0002` |
+| combination_1 | `0.0005` |
+| combination_2 | `0.001` |
+| combination_3 | `0.008` |
+| combination_4 | `0.015` |
+| combination_5 | `0.125` |
+| combination_6 | `0.25` |
+| combination_7 | `0.5` |
 
 ## Usage
 
