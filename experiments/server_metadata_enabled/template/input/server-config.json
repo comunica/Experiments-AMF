@@ -14,8 +14,7 @@
   "amf": {
     "probability": 0.001,
     "type": "BloomFilter",
-    "inband": {
-      "maxVariables": 2,
+    "enabled": {
       "maxTotalCount": %MATRIX_SERVER_ENABLED_MAX_COUNT%
     },
     "inband": {
