@@ -9,6 +9,7 @@ More information on each experiments, and how to run it, can be found inside the
 
 ## Experiments
 
+* [Client algorithms](https://github.com/comunica/Experiments-AMF/tree/master/experiments/client_algos): Different client-side AMF filter algorithms compared.
 * [Filter types](https://github.com/comunica/Experiments-AMF/tree/master/experiments/filter_types): Different AMF filter implementations (Bloom, GCS) are exposed server-side, and different client-side algorithms are tested.
 * [Probabilities](https://github.com/comunica/Experiments-AMF/tree/master/experiments/probabilities): Different AMF probabilities are used.
 * [In-band vs Out-band](https://github.com/comunica/Experiments-AMF/tree/master/experiments/in_vs_out_band): AMF metadata is exposed either in-band with TPFs, or out-band, which requires an additional HTTP request by the client.
