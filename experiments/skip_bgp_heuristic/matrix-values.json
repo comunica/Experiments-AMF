@@ -1,0 +1,15 @@
+{
+    "MATRIX_SERVER_FILTER": [
+        "BloomFilter"
+    ],
+    "MATRIX_CLIENT_CONFIG": [
+        "client-config-none.json",
+        "client-config-bgp-combined-always.json",
+        "client-config-bgp-combined-1000.json",
+        "client-config-bgp-combined-2000.json",
+        "client-config-bgp-combined-3000.json",
+        "client-config-bgp-combined-4000.json",
+        "client-config-bgp-combined-5000.json",
+        "client-config-bgp-combined-10000.json"
+    ]
+}
