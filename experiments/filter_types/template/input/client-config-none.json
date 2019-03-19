@@ -13,6 +13,7 @@
     "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-query-operation/^1.0.0/components/context.jsonld",
     "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-query-operation-quadpattern-membership-filter/^1.0.0/components/context.jsonld",
     "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-query-operation-bgp-membership-filter/^1.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-query-operation-bgp-membership-filter-combined/^1.0.0/components/context.jsonld",
 
     "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-rdf-dereference/^1.0.0/components/context.jsonld",
 

@@ -12,12 +12,8 @@ after running `comunica-bencher prepare-data`, can be found in the `combination_
 |-|-|-|
 | combination_0 | `BloomFilter` | `client-config-none.json` |
 | combination_1 | `GCSFilter` | `client-config-none.json` |
-| combination_2 | `BloomFilter` | `client-config-triple.json` |
-| combination_3 | `GCSFilter` | `client-config-triple.json` |
-| combination_4 | `BloomFilter` | `client-config-bgp.json` |
-| combination_5 | `GCSFilter` | `client-config-bgp.json` |
-| combination_6 | `BloomFilter` | `client-config-triplebgp.json` |
-| combination_7 | `GCSFilter` | `client-config-triplebgp.json` |
+| combination_2 | `BloomFilter` | `client-config-bgp-combined.json` |
+| combination_3 | `GCSFilter` | `client-config-bgp-combined.json` |
 
 ## Usage
 

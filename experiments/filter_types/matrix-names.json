@@ -1,10 +1,6 @@
 [
     "None--Bloom",
     "None--GCS",
-    "Triple--Bloom",
-    "Triple--GCS",
-    "BGP--Bloom",
-    "BGP--GCS",
-    "TripleBGP--Bloom",
-    "TripleBGP--GCS"
+    "BGPCombined--Bloom",
+    "BGPCombined--GCS"
 ]
