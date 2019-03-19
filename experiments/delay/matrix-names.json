@@ -7,8 +7,8 @@
     "512kbps-AMF-Triple",
     "2048kbps-AMF-Triple",
     "4096kbps-AMF-Triple",
-    "256kbps-AMF-BGP",
-    "512kbps-AMF-BGP",
-    "2048kbps-AMF-BGP",
-    "4096kbps-AMF-BGP"
+    "256kbps-AMF-BGPCombined",
+    "512kbps-AMF-BGPCombined",
+    "2048kbps-AMF-BGPCombined",
+    "4096kbps-AMF-BGPCombined"
 ]
