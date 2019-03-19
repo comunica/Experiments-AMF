@@ -15,7 +15,7 @@ More information on each experiments, and how to run it, can be found inside the
 * [Filter types](https://github.com/comunica/Experiments-AMF/tree/master/experiments/filter_types): Different AMF filter implementations (Bloom, GCS) are exposed server-side.
 * [Probabilities](https://github.com/comunica/Experiments-AMF/tree/master/experiments/probabilities): Different AMF probabilities are used.
 * [In-band vs Out-band](https://github.com/comunica/Experiments-AMF/tree/master/experiments/in_vs_out_band): AMF metadata is exposed either in-band with TPFs, or out-band, which requires an additional HTTP request by the client.
-* [Caching](https://github.com/comunica/Experiments-AMF/tree/master/experiments/caching): The effects of caching TPFs and AMF filters are evaluated.
+* [Caching with client-side AMF](https://github.com/comunica/Experiments-AMF/tree/master/experiments/caching) and [Caching without client-side AMF](https://github.com/comunica/Experiments-AMF/tree/master/experiments/caching-none): The effects of caching TPFs and AMF filters are evaluated.
 * [Delay](https://github.com/comunica/Experiments-AMF/tree/master/experiments/delay): The effects of different network delays are evaluated.
 * [Server metadata enabled](https://github.com/comunica/Experiments-AMF/tree/master/experiments/server_metadata_enabled): AMF metadata dynamically enabled or disabled based on the number of matches (NGINX cache is disabled).
 

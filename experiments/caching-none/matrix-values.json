@@ -1,0 +1,6 @@
+{
+    "MATRIX_SERVER_CACHE_NGINX": [
+        true,
+        false
+    ]
+}
