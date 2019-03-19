@@ -11,7 +11,7 @@ More information on each experiments, and how to run it, can be found inside the
 
 * [Client algorithms](https://github.com/comunica/Experiments-AMF/tree/master/experiments/client_algos): Different client-side AMF filter algorithms compared.
 * [Skip BGP heuristic](https://github.com/comunica/Experiments-AMF/tree/master/experiments/skip_bgp_heuristic): Different constants for the BGP actor-skipping heurtistic are compared.
-* [Dataset sizes](https://github.com/comunica/Experiments-AMF/tree/master/experiments/dataset_sizes): The effect of different sizes on the AMF improvements are tested.
+* [Dataset sizes](https://github.com/comunica/Experiments-AMF/tree/master/experiments/dataset_sizes): The effect of a larger dataset size (x10) on AMF.
 * [Filter types](https://github.com/comunica/Experiments-AMF/tree/master/experiments/filter_types): Different AMF filter implementations (Bloom, GCS) are exposed server-side.
 * [Probabilities](https://github.com/comunica/Experiments-AMF/tree/master/experiments/probabilities): Different AMF probabilities are used.
 * [In-band vs Out-band](https://github.com/comunica/Experiments-AMF/tree/master/experiments/in_vs_out_band): AMF metadata is exposed either in-band with TPFs, or out-band, which requires an additional HTTP request by the client.

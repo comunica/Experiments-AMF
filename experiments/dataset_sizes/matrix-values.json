@@ -2,10 +2,5 @@
     "MATRIX_CLIENT_CONFIG": [
         "client-config-none.json",
         "client-config-bgp-combined.json"
-    ],
-    "MATRIX_DATASET_SCALE": [
-        10,
-        100,
-        1000
     ]
 }

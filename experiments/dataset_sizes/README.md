@@ -8,14 +8,10 @@ To run this experiment, Comunica Bencher must be [installed](https://github.com/
 This experiment consists of multiple combinations, which,
 after running `comunica-bencher prepare-data`, can be found in the `combination_*` folders.
 
-| | `MATRIX_CLIENT_CONFIG` | `MATRIX_DATASET_SCALE` |
-|-|-|-|
-| combination_0 | `client-config-none.json` | `10` |
-| combination_1 | `client-config-bgp-combined.json` | `10` |
-| combination_2 | `client-config-none.json` | `100` |
-| combination_3 | `client-config-bgp-combined.json` | `100` |
-| combination_4 | `client-config-none.json` | `1000` |
-| combination_5 | `client-config-bgp-combined.json` | `1000` |
+| | `MATRIX_CLIENT_CONFIG` |
+|-|-|
+| combination_0 | `client-config-none.json` |
+| combination_1 | `client-config-bgp-combined.json` |
 
 ## Usage
 
