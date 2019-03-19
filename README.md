@@ -18,7 +18,7 @@ More information on each experiments, and how to run it, can be found inside the
 * [Caching with client-side AMF](https://github.com/comunica/Experiments-AMF/tree/master/experiments/caching) and [Caching without client-side AMF](https://github.com/comunica/Experiments-AMF/tree/master/experiments/caching-none): The effects of caching TPFs and AMF filters are evaluated.
 * [Delay](https://github.com/comunica/Experiments-AMF/tree/master/experiments/delay): The effects of different network delays are evaluated.
 * [Server metadata enabled](https://github.com/comunica/Experiments-AMF/tree/master/experiments/server_metadata_enabled): AMF metadata dynamically enabled or disabled based on the number of matches (NGINX cache is disabled).
-
+* [Warm vs Cold Cache](https://github.com/comunica/Experiments-AMF/tree/master/experiments/warm_cold_cache): Comparing the effects of a warm and cold HTTP and AMF Filter cache.
 ## Bulk execution
 
 We execute these experiments on a separate dedicated _experiment machine_.
