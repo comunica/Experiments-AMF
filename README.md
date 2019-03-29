@@ -7,6 +7,8 @@ On the other hand, different algorithms are implemented for optimizing client-si
 These experiment were created with [Comunica Bencher](https://github.com/comunica/comunica-bencher).
 More information on each experiments, and how to run it, can be found inside the README file for each experiment in the [`experiments`](https://github.com/comunica/Experiments-AMF/tree/master/experiments) folder.
 
+Script for running the statistical tests on the results can be found in the [`analysis/*`](https://github.com/comunica/Experiments-AMF/tree/master/analysis) folders.
+
 ## Experiments
 
 We introduce the following experiment groups, each having one or more concrete experiments.
