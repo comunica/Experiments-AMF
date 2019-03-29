@@ -1,0 +1,86 @@
+\documentclass[preview]{standalone}
+\usepackage[utf8]{inputenc}
+
+
+% Page setup
+\usepackage{amsmath}
+
+% Typography
+\usepackage[scaled]{helvet}
+\let\familydefault\sfdefault
+
+\usepackage[usenames,svgnames]{xcolor}
+\usepackage{tikz,pgfplots}
+\usetikzlibrary{arrows,positioning,shapes,calc,intersections}
+
+\definecolor{one}  {RGB}{142, 23,  4}
+\definecolor{two}  {RGB}{ 62,111,186}
+\definecolor{three}{RGB}{172,196, 75}
+
+\newcommand\plotfontsize{\fontsize{6}{6}\selectfont}
+\pgfplotsset{compat=1.9,
+  axis lines=left,
+  every axis/.append style={
+    font=\plotfontsize,
+  },
+  label style={
+    font=\plotfontsize\bfseries,
+  },
+  tick label style={
+    font=\plotfontsize,
+  },
+  legend cell align=left,
+  legend style={
+    /tikz/every even column/.append style={column sep=.3em},
+    draw=none, fill=none,
+    inner sep=0pt, outer sep=0pt,
+    anchor=north east,
+    text height=3pt,
+  },
+  log base 10 number format code/.code={%
+    $\pgfmathparse{10^(#1)}\pgfmathprintnumber{\pgfmathresult}$%
+  },
+}
+
+\begin{document}
+\pagestyle{empty}
+
+\pgfplotscreateplotcyclelist{linecolors}{
+    {solid,YellowGreen!70!ForestGreen,mark=none},%
+    {dotted,Goldenrod,mark=none},%
+    {solid,NavyBlue!60,mark=none},%
+    {dotted,VioletRed,mark=none},%
+    {solid,Plum,mark=none},%
+    {dotted,Yellow,mark=none},%
+    {solid,Maroon,mark=none},%
+    {dotted,Blue,mark=none},%
+}
+
+\newenvironment{resultAxis}{
+\begin{axis}[
+    cycle list name=linecolors,
+    width=400pt,
+    height=100pt,
+    xmin=0,
+    ymin=0,
+    ymax=100,
+    % Don't show axis exponent
+    ytick scale label code/.code={},
+    scaled x ticks=false,
+    x axis line style=-,
+    scale only axis,
+    clip=false,
+    axis on top,
+    xlabel={AMF result threshold (x1000)},
+    ylabel={Server CPU (\%)},
+    every axis plot/.append style={line width=1pt},
+]
+}{\end{axis}}
+\begin{tikzpicture}
+\begin{resultAxis}
+\addplot+[mark=x] table [x expr=\thisrow{threshold} / 1000, y=load, col sep=semicolon]{"threshold_serverload_cached.csv"};
+\addplot+[mark=x] table [x expr=\thisrow{threshold} / 1000, y=load, col sep=semicolon]{"threshold_serverload_notcached.csv"};
+\legend{Cached,Not Cached}
+\end{resultAxis}
+\end{tikzpicture}
+\end{document}

@@ -9,6 +9,8 @@ More information on each experiments, and how to run it, can be found inside the
 
 Script for running the statistical tests on the results can be found in the [`analysis/*`](https://github.com/comunica/Experiments-AMF/tree/master/analysis) folders.
 
+All raw results and their corresponding plots can be found in the [`results/*`](https://github.com/comunica/Experiments-AMF/tree/master/results) folders.
+
 ## Experiments
 
 We introduce the following experiment groups, each having one or more concrete experiments.

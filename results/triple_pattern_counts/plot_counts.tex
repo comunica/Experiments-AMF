@@ -1,0 +1,86 @@
+\documentclass[preview]{standalone}
+\usepackage[utf8]{inputenc}
+
+
+% Page setup
+\usepackage{amsmath}
+
+% Typography
+\usepackage[scaled]{helvet}
+\let\familydefault\sfdefault
+
+\usepackage[usenames,svgnames]{xcolor}
+\usepackage{tikz,pgfplots}
+\usetikzlibrary{arrows,positioning,shapes,calc,intersections}
+
+\newcommand\plotfontsize{\fontsize{6}{6}\selectfont}
+\pgfplotsset{compat=1.9,
+  axis lines=left,
+  every axis/.append style={
+    font=\plotfontsize,
+  },
+  label style={
+    font=\plotfontsize\bfseries,
+  },
+  tick label style={
+    font=\plotfontsize,
+  },
+  legend cell align=left,
+  legend style={
+    %M/tikz/every even column/.append style={column sep=.3em},
+    draw=none, fill=none,
+    inner sep=0pt, outer sep=0pt,
+    anchor=north east,
+    text height=3pt,
+  },
+  log base 10 number format code/.code={%
+    $\pgfmathparse{10^(#1)}\pgfmathprintnumber{\pgfmathresult}$%
+  },
+}
+
+\begin{document}
+\pagestyle{empty}
+
+\pgfplotscreateplotcyclelist{linecolors}{
+    {solid,YellowGreen!70!ForestGreen,mark=none},%
+    {dotted,Goldenrod,mark=none},%
+    {solid,NavyBlue!60,mark=none},%
+    {dotted,VioletRed,mark=none},%
+    {solid,Plum,mark=none},%
+    {dotted,Yellow,mark=none},%
+    {solid,Maroon,mark=none},%
+    {dotted,Blue,mark=none},%
+}
+
+\newenvironment{resultAxis}{
+\begin{axis}[
+    cycle list name=linecolors,
+    %xtick=data,
+    width=600pt,
+    height=110pt,
+    ymode=log,
+    %xticklabel=\empty,
+    % Don't show axis exponent
+    ytick scale label code/.code={},
+    scaled y ticks=false,
+    x axis line style=-,
+    scale only axis,
+    clip=false,
+    axis on top,
+    xlabel={Triple pattern (ordered id)},
+    ylabel={Triple count (x1M)},
+    %xtick style={draw=none},
+    every axis plot/.append style={line width=1pt}
+]
+}{\end{axis}}
+\begin{tikzpicture}
+\begin{resultAxis}
+    \addplot+[mark=none] table [x expr=\coordindex+1, y expr=\thisrow{count} / 1000000, col sep=semicolon]{"counts-1M.csv"};
+    \addplot+[mark=none] table [x expr=\coordindex+1, y expr=\thisrow{count} / 1000000, col sep=semicolon]{"counts-2M.csv"};
+    \addplot+[mark=none] table [x expr=\coordindex+1, y expr=\thisrow{count} / 1000000, col sep=semicolon]{"counts-10M.csv"};
+    \addplot+[mark=none] table [x expr=\coordindex+1, y expr=\thisrow{count} / 1000000, col sep=semicolon]{"counts-20M.csv"};
+    \addplot+[mark=none] table [x expr=\coordindex+1, y expr=\thisrow{count} / 1000000, col sep=semicolon]{"counts-100M.csv"};
+\legend{1M,2M,10M,20M,100M}
+\end{resultAxis}
+\end{tikzpicture}
+\end{document}
