@@ -14,13 +14,7 @@
 \usepackage[usenames,svgnames]{xcolor}
 \usepackage{tikz,pgfplots}
 \usetikzlibrary{arrows,positioning,shapes,calc,intersections,patterns}
-
-% http://colorbrewer2.org/#type=diverging&scheme=Spectral&n=5
-\definecolor{Spectral1}{RGB}{215, 25, 28}
-\definecolor{Spectral2}{RGB}{253,174, 97}
-\definecolor{Spectral3}{RGB}{255,255,191}
-\definecolor{Spectral4}{RGB}{171,221,164}
-\definecolor{Spectral5}{RGB}{ 43,131,186}
+\usepgfplotslibrary{colorbrewer}
 
 \newcommand\plotfontsize{\fontsize{9}{9}\selectfont}
 \pgfplotsset{compat=1.9,
@@ -48,14 +42,7 @@
   log base 10 number format code/.code={%
     $\pgfmathparse{10^(#1)}\pgfmathprintnumber{\pgfmathresult}$%
   },
-  /pgfplots/bar cycle list/.style={/pgfplots/cycle list={%
-      {Spectral1},
-      {Spectral2},
-      {Spectral3!95!black},
-      {Spectral4},
-      {Spectral5}
-    }
-  },
+  cycle list/Spectral-8,
 }
 
 \begin{document}
@@ -81,6 +68,7 @@
     axis on top,
     area legend,
     ylabel={Duration (s)},
+    cycle list name=Spectral-8,
     every axis plot/.append style={
       draw=none,
       fill,
