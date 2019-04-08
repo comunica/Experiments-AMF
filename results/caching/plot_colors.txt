@@ -1,0 +1,4 @@
+dotted,fill=Goldenrod
+solid,fill=VioletRed
+dotted,fill=Yellow
+solid,fill=White

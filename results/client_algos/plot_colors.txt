@@ -1,0 +1,8 @@
+solid,fill=White
+dotted,fill=Goldenrod
+solid,fill=NavyBlue!60
+dotted,fill=Blue
+solid,fill=Plum
+dotted,fill=Yellow
+solid,fill=Maroon
+dotted,fill=VioletRed
