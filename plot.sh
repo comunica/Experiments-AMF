@@ -2,10 +2,13 @@
 # Create experiment result plots
 # Should be run on the analysis machine.
 
-for experiment in $(ls results); do
+for experiment in "caching"; do
     flags=""
     if [ "$experiment" = "caching" ]; then
-        flags="--log-y"
+        flags="$flags --log-y --legend-pos 1.135,0.98"
+    fi
+    if [ "$experiment" = "client_algos" ]; then
+        flags="$flags --legend-pos 1.08,1"
     fi
     combinations=combination_*
     if [ "$experiment" = "probabilities" ]; then
@@ -21,7 +24,7 @@ pushd results/delay
 comunica-bencher plot queries -q '^C' -n plot_none_c --no-legend combination_0 combination_1 combination_2 combination_3 && tex2svg plot_none_c.tex
 comunica-bencher plot queries -q '^[^C]' -n plot_none_no_c combination_0 combination_1 combination_2 combination_3 && tex2svg plot_none_no_c.tex
 comunica-bencher plot queries -q '^C' -n plot_triple_c --no-legend combination_4 combination_5 combination_6 combination_7 && tex2svg plot_triple_c.tex
-comunica-bencher plot queries -q '^[^C]' -n plot_triple_no_c combination_4 combination_5 combination_6 combination_7 && tex2svg plot_triple_no_c.tex
+comunica-bencher plot queries -q '^[^C]' -n plot_triple_no_c --legend-pos 0.96,0.98 combination_4 combination_5 combination_6 combination_7 && tex2svg plot_triple_no_c.tex
 comunica-bencher plot queries -q '^C' -n plot_bgp_c --no-legend combination_8 combination_9 combination_10 combination_11 && tex2svg plot_bgp_c.tex
 comunica-bencher plot queries -q '^[^C]' -n plot_bgp_no_c combination_8 combination_9 combination_10 combination_11 && tex2svg plot_bgp_no_c.tex
 popd

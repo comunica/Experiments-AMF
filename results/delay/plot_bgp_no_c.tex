@@ -37,6 +37,7 @@
     draw=none, fill=none,
     inner sep=0pt, outer sep=0pt,
     anchor=north east,
+    at={(0.98,0.98)},
     text height=3pt,
   },
   log base 10 number format code/.code={%
@@ -78,7 +79,7 @@
 \begin{tikzpicture}
 \begin{resultAxis}
 \addplot+[ybar] table [x=query, y expr=\thisrow{combination_8} / 1000, col sep=semicolon]{"plot_bgp_no_c.csv"}; \addplot+[ybar] table [x=query, y expr=\thisrow{combination_9} / 1000, col sep=semicolon]{"plot_bgp_no_c.csv"}; \addplot+[ybar] table [x=query, y expr=\thisrow{combination_10} / 1000, col sep=semicolon]{"plot_bgp_no_c.csv"}; \addplot+[ybar] table [x=query, y expr=\thisrow{combination_11} / 1000, col sep=semicolon]{"plot_bgp_no_c.csv"}; 
-\legend{256kbps-AMF-BGPCombined,512kbps-AMF-BGPCombined,2048kbps-AMF-BGPCombined,4096kbps-AMF-BGPCombined}
+\legend{256kbps,512kbps,2048kbps,4096kbps}
 \end{resultAxis}
 \end{tikzpicture}
 \end{document}
