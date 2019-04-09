@@ -8,16 +8,15 @@
 % Typography
 \usepackage[scaled]{helvet}
 \let\familydefault\sfdefault
+\usepackage{sansmath}
+\sansmath
 
 \usepackage[usenames,svgnames]{xcolor}
 \usepackage{tikz,pgfplots}
 \usetikzlibrary{arrows,positioning,shapes,calc,intersections,patterns}
+\usepgfplotslibrary{colorbrewer}
 
-\definecolor{one}  {RGB}{142, 23,  4}
-\definecolor{two}  {RGB}{ 62,111,186}
-\definecolor{three}{RGB}{172,196, 75}
-
-\newcommand\plotfontsize{\fontsize{6}{6}\selectfont}
+\newcommand\plotfontsize{\fontsize{9}{9}\selectfont}
 \pgfplotsset{compat=1.9,
   axis lines=left,
   every axis/.append style={
@@ -27,7 +26,10 @@
     font=\plotfontsize\bfseries,
   },
   tick label style={
-    font=\plotfontsize,
+    font=\plotfontsize\bfseries,
+  },
+  xtick style={
+    draw=none,
   },
   legend cell align=left,
   legend style={
@@ -40,43 +42,42 @@
   log base 10 number format code/.code={%
     $\pgfmathparse{10^(#1)}\pgfmathprintnumber{\pgfmathresult}$%
   },
+  cycle list/Spectral-4,
 }
 
 \begin{document}
 \pagestyle{empty}
 
-\pgfplotsset{
-  /pgfplots/bar cycle list/.style={/pgfplots/cycle list={%
-        {solid,fill=YellowGreen!70!ForestGreen,mark=none}, {dotted,fill=Goldenrod,mark=none}, {solid,fill=NavyBlue!60,mark=none}, {dotted,fill=VioletRed,mark=none}, {solid,fill=Plum,mark=none}, {dotted,fill=Yellow,mark=none}, {solid,fill=Maroon,mark=none}, {dotted,fill=Blue,mark=none}, 
-    }
-  },
-}
-
 \newenvironment{resultAxis}{
 \begin{axis}[
-    xbar=1pt,
     xtick=data,
     width=60pt,
     height=96pt,
     ymin=0,
-    bar width=2pt,
-    enlarge x limits={abs=4pt},
+    bar width=2.75pt,
+    xbar=.25pt,
+    enlarge x limits={abs=8pt},
     symbolic x coords={C1,C2,C3},
     % Don't show axis exponent
     ytick scale label code/.code={},
     scaled y ticks=false,
-    x axis line style=-,
+    x axis line style={draw=none},
     % reverse legend,
     scale only axis,
     clip=false,
     axis on top,
     area legend,
-    ylabel={Duration (sec)}
+    ylabel={Duration (s)},
+    cycle list name=Spectral-4,
+    every axis plot/.append style={
+        draw=none,
+        fill,
+    },
 ]
 }{\end{axis}}
 \begin{tikzpicture}
 \begin{resultAxis}
-\addplot+[ybar] table [x=query, y expr=\thisrow{combination_0} / 1000, col sep=semicolon]{"plot_c.csv"}; \addplot+[ybar] table [x=query, y expr=\thisrow{combination_1} / 1000, col sep=semicolon]{"plot_c.csv"}; 
+\addplot+[ybar] table [x=query, y expr=\thisrow{combination_0} / 1000, col sep=semicolon]{"plot_c.csv"}; \addplot+[ybar] table [x=query, y expr=\thisrow{combination_1} / 1000, col sep=semicolon]{"plot_c.csv"}; \addplot+[ybar] table [x=query, y expr=\thisrow{combination_0} / 1000, col sep=semicolon]{"plot_c.csv"}; \addplot+[ybar] table [x=query, y expr=\thisrow{combination_1} / 1000, col sep=semicolon]{"plot_c.csv"}; 
 
 \end{resultAxis}
 \end{tikzpicture}

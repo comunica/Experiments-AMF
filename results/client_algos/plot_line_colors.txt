@@ -1,8 +1,0 @@
-solid,Black
-dotted,Goldenrod
-solid,NavyBlue!60
-dotted,Blue
-solid,Plum
-dotted,Yellow
-solid,Maroon
-dotted,VioletRed

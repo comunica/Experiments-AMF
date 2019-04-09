@@ -8,12 +8,15 @@
 % Typography
 \usepackage[scaled]{helvet}
 \let\familydefault\sfdefault
+\usepackage{sansmath}
+\sansmath
 
 \usepackage[usenames,svgnames]{xcolor}
 \usepackage{tikz,pgfplots}
 \usetikzlibrary{arrows,positioning,shapes,calc,intersections}
+\usepgfplotslibrary{colorbrewer}
 
-\newcommand\plotfontsize{\fontsize{6}{6}\selectfont}
+\newcommand\plotfontsize{\fontsize{9}{9}\selectfont}
 \pgfplotsset{compat=1.9,
   axis lines=left,
   every axis/.append style={
@@ -36,28 +39,17 @@
   log base 10 number format code/.code={%
     $\pgfmathparse{10^(#1)}\pgfmathprintnumber{\pgfmathresult}$%
   },
+  cycle list/Spectral-6,
 }
 
 \begin{document}
 \pagestyle{empty}
 
-\pgfplotscreateplotcyclelist{linecolors}{
-    {solid,YellowGreen!70!ForestGreen,mark=none},%
-    {dotted,Goldenrod,mark=none},%
-    {solid,NavyBlue!60,mark=none},%
-    {dotted,VioletRed,mark=none},%
-    {solid,Plum,mark=none},%
-    {dotted,Yellow,mark=none},%
-    {solid,Maroon,mark=none},%
-    {dotted,Blue,mark=none},%
-}
-
 \newenvironment{resultAxis}{
 \begin{axis}[
-    cycle list name=linecolors,
     %xtick=data,
-    width=600pt,
-    height=110pt,
+    width=500pt,
+    height=96pt,
     ymode=log,
     %xticklabel=\empty,
     % Don't show axis exponent
@@ -70,7 +62,8 @@
     xlabel={Triple pattern (ordered id)},
     ylabel={Triple count (x1M)},
     %xtick style={draw=none},
-    every axis plot/.append style={line width=1pt}
+    every axis plot/.append style={line width=1pt},
+    cycle list name=Spectral-6,
 ]
 }{\end{axis}}
 \begin{tikzpicture}

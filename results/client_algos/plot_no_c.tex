@@ -42,7 +42,7 @@
   log base 10 number format code/.code={%
     $\pgfmathparse{10^(#1)}\pgfmathprintnumber{\pgfmathresult}$%
   },
-  cycle list/Spectral-8,
+  cycle list/Spectral-6,
 }
 
 \begin{document}
@@ -68,10 +68,10 @@
     axis on top,
     area legend,
     ylabel={Duration (s)},
-    cycle list name=Spectral-8,
+    cycle list name=Spectral-6,
     every axis plot/.append style={
-      draw=none,
-      fill,
+        draw=none,
+        fill,
     },
 ]
 }{\end{axis}}

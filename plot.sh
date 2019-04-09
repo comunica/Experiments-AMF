@@ -7,12 +7,13 @@ for experiment in $(ls results); do
     if [ "$experiment" = "caching" ]; then
         flags="--log-y"
     fi
-    pushd results/$experiment
-    if [ -f "plot_colors.txt" ]; then
-        flags="$flags -c plot_colors.txt"
+    combinations=combination_*
+    if [ "$experiment" = "probabilities" ]; then
+        combinations="combination_0 combination_2 combination_4 combination_6 combination_7"
     fi
-    comunica-bencher plot queries -q '^C' -n plot_c --no-legend $flags combination_* && tex2svg plot_c.tex
-    comunica-bencher plot queries -q '^[^C]' -n plot_no_c $flags combination_* && tex2svg plot_no_c.tex
+    pushd results/$experiment
+    comunica-bencher plot queries -q '^C' -n plot_c --no-legend $flags $combinations && tex2svg plot_c.tex
+    comunica-bencher plot queries -q '^[^C]' -n plot_no_c $flags $combinations && tex2svg plot_no_c.tex
     popd
 done
 
@@ -34,6 +35,6 @@ popd
 
 
 pushd results/client_algos
-comunica-bencher plot dief time -c plot_colors.txt combination_* && tex2svg dief_time.tex
-comunica-bencher plot query_times F3 -c plot_line_colors.txt combination_* && tex2svg query_times_F3.tex
+comunica-bencher plot dief time combination_* && tex2svg dief_time.tex
+comunica-bencher plot query_times F3 combination_* && tex2svg query_times_F3.tex
 popd
