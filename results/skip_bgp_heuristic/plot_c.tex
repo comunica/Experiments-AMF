@@ -37,12 +37,13 @@
     draw=none, fill=none,
     inner sep=0pt, outer sep=0pt,
     anchor=north east,
+    at={(0.98,0.98)},
     text height=3pt,
   },
   log base 10 number format code/.code={%
     $\pgfmathparse{10^(#1)}\pgfmathprintnumber{\pgfmathresult}$%
   },
-  cycle list/Spectral-8,
+  cycle list/Spectral-6,
 }
 
 \begin{document}
@@ -56,7 +57,7 @@
     ymin=0,
     bar width=2.75pt,
     xbar=.25pt,
-    enlarge x limits={abs=16pt},
+    enlarge x limits={abs=12pt},
     symbolic x coords={C1,C2,C3},
     % Don't show axis exponent
     ytick scale label code/.code={},
@@ -68,7 +69,7 @@
     axis on top,
     area legend,
     ylabel={Duration (s)},
-    cycle list name=Spectral-8,
+    cycle list name=Spectral-6,
     every axis plot/.append style={
         draw=none,
         fill,
@@ -77,7 +78,7 @@
 }{\end{axis}}
 \begin{tikzpicture}
 \begin{resultAxis}
-\addplot+[ybar] table [x=query, y expr=\thisrow{combination_0} / 1000, col sep=semicolon]{"plot_c.csv"}; \addplot+[ybar] table [x=query, y expr=\thisrow{combination_1} / 1000, col sep=semicolon]{"plot_c.csv"}; \addplot+[ybar] table [x=query, y expr=\thisrow{combination_2} / 1000, col sep=semicolon]{"plot_c.csv"}; \addplot+[ybar] table [x=query, y expr=\thisrow{combination_3} / 1000, col sep=semicolon]{"plot_c.csv"}; \addplot+[ybar] table [x=query, y expr=\thisrow{combination_4} / 1000, col sep=semicolon]{"plot_c.csv"}; \addplot+[ybar] table [x=query, y expr=\thisrow{combination_5} / 1000, col sep=semicolon]{"plot_c.csv"}; \addplot+[ybar] table [x=query, y expr=\thisrow{combination_6} / 1000, col sep=semicolon]{"plot_c.csv"}; \addplot+[ybar] table [x=query, y expr=\thisrow{combination_7} / 1000, col sep=semicolon]{"plot_c.csv"}; 
+\addplot+[ybar] table [x=query, y expr=\thisrow{combination_0} / 1000, col sep=semicolon]{"plot_c.csv"}; \addplot+[ybar] table [x=query, y expr=\thisrow{combination_1} / 1000, col sep=semicolon]{"plot_c.csv"}; \addplot+[ybar] table [x=query, y expr=\thisrow{combination_2} / 1000, col sep=semicolon]{"plot_c.csv"}; \addplot+[ybar] table [x=query, y expr=\thisrow{combination_3} / 1000, col sep=semicolon]{"plot_c.csv"}; \addplot+[ybar] table [x=query, y expr=\thisrow{combination_4} / 1000, col sep=semicolon]{"plot_c.csv"}; \addplot+[ybar] table [x=query, y expr=\thisrow{combination_5} / 1000, col sep=semicolon]{"plot_c.csv"}; 
 
 \end{resultAxis}
 \end{tikzpicture}

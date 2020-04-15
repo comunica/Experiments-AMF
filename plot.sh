@@ -36,6 +36,10 @@ comunica-bencher plot queries -q '^C' -n plot_notcached_c --no-legend combinatio
 comunica-bencher plot queries -q '^[^C]' -n plot_notcached_no_c combination_5 combination_6 combination_7 combination_8 combination_9 && tex2svg plot_notcached_no_c.tex
 popd
 
+pushd results/skip_bgp_heuristic
+comunica-bencher plot queries -q '^C' -n plot_c --no-legend $flags combination_0 combination_1 combination_2 combination_3 combination_4 combination_5 && tex2svg plot_c.tex
+comunica-bencher plot queries -q '^[^C]' -n plot_no_c $flags combination_0 combination_1 combination_2 combination_3 combination_4 combination_5 && tex2svg plot_no_c.tex
+popd
 
 pushd results/client_algos
 comunica-bencher plot dief time combination_* && tex2svg dief_time.tex
