@@ -4,6 +4,8 @@ This repository contains experiments that evaluate the performance of _Approxima
 On the one hand, AMFs are implemented and exposed in various ways by [`ldf-server`](https://github.com/LinkedDataFragments/Server.js/tree/feature-handlers-amf-2).
 On the other hand, different algorithms are implemented for optimizing client-side query evaluation for in [Comunica engines](https://github.com/comunica/comunica-feature-amf).
 
+**[Learn more about this Comunica AMF functionality on our website](https://comunica.dev/research/amf/).**
+
 These experiment were created with [Comunica Bencher](https://github.com/comunica/comunica-bencher).
 More information on each experiments, and how to run it, can be found inside the README file for each experiment in the [`experiments`](https://github.com/comunica/Experiments-AMF/tree/master/experiments) folder.
 
